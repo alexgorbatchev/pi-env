@@ -34,4 +34,4 @@ Example `.pi/settings.json`:
 }
 ```
 
-When Pi runs, these variables are logged to the console and assigned to `process.env`.
+When Pi runs, these variables are displayed in the session output and assigned to `process.env`. Use `/env` to print the same report again.
