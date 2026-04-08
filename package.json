@@ -1,6 +1,6 @@
 {
   "name": "@alexgorbatchev/pi-env",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Pi extension that injects environment variables from project config settings.",
   "type": "module",
   "author": "Alex Gorbatchev",
