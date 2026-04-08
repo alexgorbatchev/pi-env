@@ -45,9 +45,8 @@
     "typescript": "6.0.2"
   },
   "scripts": {
-    "fmt": "bun --bun oxfmt --write .",
-    "fmt:check": "bun --bun oxfmt --check .",
-    "check": "bun run fmt:check && bun --bun oxlint . && tsgo --noEmit",
+    "fix": "bun --bun oxfmt --write .",
+    "check": "bun --bun oxfmt --check . && bun --bun oxlint . && tsgo --noEmit",
     "test": "PI_OFFLINE=1 bun x pi --no-extensions -e ./src/index.ts --list-models > /dev/null 2>&1",
     "test:local": "bun x pi -e ./src/index.ts"
   }
