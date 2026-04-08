@@ -20,12 +20,15 @@ pi install npm:@alexgorbatchev/pi-env -l
 
 Define environment variables under the `"@alexgorbatchev/pi-env"` key in your settings (either globally or per-project). Both keys and values must be strings.
 
+> [!IMPORTANT]
+> Do not store secrets such as API keys, access tokens, or passwords in this extension's settings. The extension currently displays configured values in the Pi UI when a session starts, so only use non-sensitive configuration here.
+
 Example `.pi/settings.json`:
 
 ```json
 {
   "@alexgorbatchev/pi-env": {
-    "API_KEY": "your-token-here",
+    "APP_ENV": "development",
     "API_URL": "http://localhost:3000"
   }
 }
