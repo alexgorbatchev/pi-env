@@ -36,13 +36,13 @@
     "@mariozechner/pi-coding-agent": "*"
   },
   "devDependencies": {
-    "@alexgorbatchev/typescript-ai-policy": "^1.0.5",
-    "@mariozechner/pi-coding-agent": "0.65.2",
-    "@types/node": "25.5.2",
-    "@typescript/native-preview": "7.0.0-dev.20260407.1",
-    "oxfmt": "^0.44.0",
-    "oxlint": "^1.59.0",
-    "typescript": "6.0.2"
+    "@alexgorbatchev/typescript-ai-policy": "^12.0.0",
+    "@mariozechner/pi-coding-agent": "0.73.1",
+    "@types/node": "26.1.1",
+    "@typescript/native-preview": "7.0.0-dev.20260707.2",
+    "oxfmt": "^0.59.0",
+    "oxlint": "^1.74.0",
+    "typescript": "7.0.2"
   },
   "scripts": {
     "fix": "bun --bun oxfmt --write .",
