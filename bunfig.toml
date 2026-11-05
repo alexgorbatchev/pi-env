@@ -1,2 +1,8 @@
+env = false
+
 [test]
-preload = ["./scripts/require-isolated-pi.ts"]
+preload = ["@alexgorbatchev/pi-test-isolation/preload", "./src/__tests__/fixtures/coveragePreload.ts"]
+coverage = true
+coverageThreshold = { lines = 0.9, functions = 0.9 }
+coveragePathIgnorePatterns = ["**/__tests__/**"]
+coverageReporter = ["text"]

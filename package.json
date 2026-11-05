@@ -1,6 +1,6 @@
 {
   "name": "@alexgorbatchev/pi-env",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "description": "Pi extension that injects environment variables from project config settings.",
   "type": "module",
   "author": "Alex Gorbatchev",
@@ -20,7 +20,8 @@
     "configuration"
   ],
   "files": [
-    "src",
+    "src/**/*.ts",
+    "!src/**/__tests__/**",
     "README.md",
     "LICENSE"
   ],
@@ -33,22 +34,23 @@
     ]
   },
   "peerDependencies": {
-    "@mariozechner/pi-coding-agent": "*"
+    "@earendil-works/pi-coding-agent": "^1.5.0",
+    "@earendil-works/pi-tui": "^1.5.0"
   },
   "devDependencies": {
-    "@alexgorbatchev/typescript-ai-policy": "^12.0.0",
-    "@mariozechner/pi-coding-agent": "0.73.1",
-    "@types/bun": "^1.4.2",
-    "@types/node": "26.1.1",
-    "@typescript/native-preview": "7.0.0-dev.20260707.2",
-    "oxfmt": "^0.59.0",
-    "oxlint": "^1.74.0",
-    "typescript": "7.0.2"
+    "@alexgorbatchev/pi-test-isolation": "github:alexgorbatchev/pi-test-isolation#v1.0.0",
+    "@alexgorbatchev/typescript-ai-policy": "^14.0.3",
+    "@earendil-works/pi-coding-agent": "1.5.0",
+    "@earendil-works/pi-tui": "1.5.0",
+    "@types/bun": "^1.4.4",
+    "@types/node": "^26.6.6",
+    "oxfmt": "^0.76.0",
+    "oxlint": "^1.91.0",
+    "ts-unused": "^3.8.0",
+    "typescript": "^7.0.2"
   },
-  "scripts": {
-    "fix": "bun --bun oxfmt --write .",
-    "check": "bun --bun oxfmt --check . && bun --bun oxlint . && tsgo --noEmit",
-    "test": "bun scripts/run-isolated-pi.ts bun test",
-    "test:local": "bun x pi -e ./src/index.ts"
-  }
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "exports": "./src/index.ts"
 }

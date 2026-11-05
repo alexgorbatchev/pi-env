@@ -1,4 +1,4 @@
-import { DefaultResourceLoader, getAgentDir } from "@mariozechner/pi-coding-agent";
+import { DefaultResourceLoader, getAgentDir } from "@earendil-works/pi-coding-agent";
 import { afterEach, describe, expect, test } from "bun:test";
 import { mkdtempSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";

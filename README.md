@@ -35,3 +35,15 @@ Example `.pi/settings.json`:
 ```
 
 When Pi runs, these variables are displayed in the session output and assigned to `process.env`. Use `/env` to print the same report again.
+
+## Development
+
+Use Bun 1.4 or newer and `just`. The extension requires Pi 1.x (1.5 or newer) from the `@earendil-works` package scope and Node.js 22.19 or newer.
+
+```sh
+just setup
+just check
+just run
+```
+
+`just run` starts Pi with your real settings. `just test` uses the GitHub-pinned [pi-test-isolation](https://github.com/alexgorbatchev/pi-test-isolation) runner and preload to isolate home, caches, sessions, and temporary files. Direct `bun test` is rejected outside that environment. Tests exercise the installed Pi loader, settings precedence, reporting, and context filtering; CI enforces at least 90% line and function coverage, including unexecuted source.
