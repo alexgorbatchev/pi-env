@@ -38,6 +38,7 @@
   "devDependencies": {
     "@alexgorbatchev/typescript-ai-policy": "^12.0.0",
     "@mariozechner/pi-coding-agent": "0.73.1",
+    "@types/bun": "^1.4.2",
     "@types/node": "26.1.1",
     "@typescript/native-preview": "7.0.0-dev.20260707.2",
     "oxfmt": "^0.59.0",
@@ -47,7 +48,7 @@
   "scripts": {
     "fix": "bun --bun oxfmt --write .",
     "check": "bun --bun oxfmt --check . && bun --bun oxlint . && tsgo --noEmit",
-    "test": "PI_OFFLINE=1 bun x pi --no-extensions -e ./src/index.ts --list-models > /dev/null 2>&1",
+    "test": "bun scripts/run-isolated-pi.ts bun test",
     "test:local": "bun x pi -e ./src/index.ts"
   }
 }

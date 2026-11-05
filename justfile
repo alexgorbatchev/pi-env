@@ -8,3 +8,7 @@ setup:
 # Start Pi with the local extension
 run *args:
     bun x --no-install pi -e ./src/index.ts {{ args }}
+
+# Run the tests in an isolated Pi environment
+test *args:
+    bun run test {{ args }}
